@@ -1,0 +1,27 @@
+/* .title,
+.badge {
+  display: block;
+} */
+
+.button {
+  padding: 2rem 4rem;
+  border: none;
+  background: transparent;
+  box-shadow: 0 0 0 2px #000;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 20rem;
+}
+
+.button:hover {
+  background: rgb(85, 155, 107);
+}
+.badge {
+  font-size: 3rem;
+}
