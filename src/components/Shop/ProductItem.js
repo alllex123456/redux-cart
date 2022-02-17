@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './ProductItem.module.css';
 import { cartActions } from '../../store/cart-store';
 import { useDispatch } from 'react-redux';
+import { uiActions } from '../../store/ui-store';
 
 export default function ProductItem(props) {
   const dispatch = useDispatch();

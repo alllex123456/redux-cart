@@ -1,15 +1,27 @@
 import React from 'react';
 import classes from './Cart.module.css';
 import CartItem from './CartItem';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { uiActions } from '../../store/ui-store';
+import { cartActions } from '../../store/cart-store';
 
 export default function Cart() {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const formattedTotalAmount = totalAmount.toLocaleString(navigator.language, {
     style: 'currency',
     currency: 'USD',
   });
+  const quantityOverZero = cart.length > 0;
+
+  const hideCartHandler = () => {
+    dispatch(uiActions.toggleCart());
+  };
+
+  const clearCartHandler = () => {
+    dispatch(cartActions.clearCart());
+  };
 
   return (
     <ul className={classes.cart}>
@@ -31,8 +43,11 @@ export default function Cart() {
         Total amount for the order: {formattedTotalAmount}
       </h3>
       <div className={classes.actions}>
-        <button>Send order</button>
-        <button>Cancel</button>
+        {quantityOverZero && <button>Send order</button>}
+        {quantityOverZero && (
+          <button onClick={clearCartHandler}>Clear cart</button>
+        )}
+        <button onClick={hideCartHandler}>Close</button>
       </div>
     </ul>
   );
