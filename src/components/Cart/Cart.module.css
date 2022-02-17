@@ -1,0 +1,28 @@
+.cart {
+  list-style: none;
+
+  max-width: 80rem;
+  margin: 5rem auto;
+
+  background: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 3rem;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  margin-bottom: 3rem;
+}
+
+.totalAmount {
+  font-size: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #000;
+}
+
+.actions {
+  text-align: right;
+}

@@ -1,0 +1,43 @@
+.product {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  max-width: 80rem;
+  margin: 0 auto 2rem auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+button {
+  padding: 1rem 2rem;
+  background: transparent;
+  box-shadow: 0 0 3px #000;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+button:hover {
+  background: rgb(85, 155, 107);
+  color: #fff;
+}
